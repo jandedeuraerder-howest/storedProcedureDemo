@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:storedProcedureDemo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="886.697">
     <Grid>
-        
+        <GroupBox x:Name="grpCursussen" Header="Cursussen" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="418">
+            <Grid>
+                <DataGrid x:Name="dgrCursussen" HorizontalAlignment="Left"  VerticalAlignment="Top"  Margin="0,0,-2,-12" Height="389" Width="408"
+                          SelectedValuePath="cursusnr" 
+                          SelectionUnit="FullRow"
+                          SelectionMode="Single"                          
+                          SelectionChanged="DgrCursussen_SelectionChanged"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Details" HorizontalAlignment="Left" Height="349" Margin="465,10,0,0" VerticalAlignment="Top" Width="350">
+            <Grid>
+                <Label Content="Cursusnr :" HorizontalAlignment="Left" Margin="16,26,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lblCursusNummer" Content="" HorizontalAlignment="Left" Margin="101,26,0,0" VerticalAlignment="Top" Width="196"/>
+                <Label Content="Naam : " HorizontalAlignment="Left" Margin="16,57,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtCursusNaam" HorizontalAlignment="Left" Height="23" Margin="101,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="196"/>
+                <Label Content="Prijs : " HorizontalAlignment="Left" Margin="16,100,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtInschrijvingsgeld" TextAlignment="Right" HorizontalAlignment="Left" Height="23" Margin="101,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="196"/>
+                <Button x:Name="btnBijwerken" Content="Cursus bijwerken" HorizontalAlignment="Left" Margin="16,151,0,0" VerticalAlignment="Top" Width="129" Height="35" Click="BtnBijwerken_Click"/>
+                <Button x:Name="btnToevoegen" Content="Als nieuwe cursus toevoegen" HorizontalAlignment="Left" Margin="16,191,0,0" VerticalAlignment="Top" Width="198" Height="35" Click="BtnToevoegen_Click"/>
+                <Button x:Name="btnVerwijderen" Content="Cursus verwijderen" HorizontalAlignment="Left" Margin="16,231,0,0" VerticalAlignment="Top" Width="129" Height="35" Click="BtnVerwijderen_Click"/>
+
+            </Grid>
+        </GroupBox>
+
     </Grid>
 </Window>
